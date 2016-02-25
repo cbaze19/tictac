@@ -25,7 +25,7 @@ io.on('connection', function(socket) {
 		players.push(socket);
 
 		if (players.length == 2) {
-			turn = players[0].id;=
+			turn = players[0].id;
 
 			players[0].emit('start game', {turn: turn, piece: 'x', name: 'Player 1', moves: moves});
 			players[1].emit('start game', {turn: turn, piece: 'o', name: 'Player 2', moves: moves});
@@ -39,7 +39,7 @@ io.on('connection', function(socket) {
 		});
 
 		if (moved[0] == null ) {
-			if (data.id == turn) {=
+			if (data.id == turn) {
 
 				io.emit('move-confirm', data);
 				moves.push(data);
