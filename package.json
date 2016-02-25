@@ -2,8 +2,20 @@
   "name": "tictactoe",
   "version": "0.0.1",
   "description": "tictactoe app",
+  "main": "index.js",
+  "scripts": {
+  	"start": "node index.js"
+  },
   "dependencies": {
     "express": "^4.10.2",
     "socket.io": "^1.4.5"
-  }
+  },
+  "engines": {
+  	"node": "4.2.6"
+  },
+  "keywords": [
+  	"node",
+  	"heroku",
+  	"express"
+  ]
 }
