@@ -19,14 +19,13 @@ var turn;
 var moves = [];
 
 io.on('connection', function(socket) {
-	console.log('User connected...');
+	//console.log('User connected...');
 
 	if (players.length <= 1) {
 		players.push(socket);
 
 		if (players.length == 2) {
-			turn = players[0].id;
-			console.log('Current Turn: ' + turn + '\n');
+			turn = players[0].id;=
 
 			players[0].emit('start game', {turn: turn, piece: 'x', name: 'Player 1', moves: moves});
 			players[1].emit('start game', {turn: turn, piece: 'o', name: 'Player 2', moves: moves});
@@ -40,8 +39,7 @@ io.on('connection', function(socket) {
 		});
 
 		if (moved[0] == null ) {
-			if (data.id == turn) {
-				console.log('MOVE:  ID: ' + data.id + ', Piece: ' + data.piece + ', Sector: ' + data.sector);
+			if (data.id == turn) {=
 
 				io.emit('move-confirm', data);
 				moves.push(data);
@@ -54,7 +52,6 @@ io.on('connection', function(socket) {
 					turn = players[0].id;
 				}
 
-				console.log('Current Turn: ' + turn + '\n');
 			}
 			
 		}
@@ -62,14 +59,14 @@ io.on('connection', function(socket) {
 	});
 
 	socket.on('disconnect', function() {
-		console.log('User disconnected...');
+		//console.log('User disconnected...');
 		players.splice(players.indexOf(socket), 1);
 	});
 
 });
 
 http.listen(port, function() {
-	console.log('listening on ' + port);
+	//console.log('listening on ' + port);
 });
 
 function checkWin() {
@@ -95,9 +92,6 @@ function checkWin() {
 			p2_moves.push(moves[i].sector);
 		}
 	}
-
-	console.log('X Moves: ' + p1_moves);
-	console.log('O Moves: ' + p2_moves);
 
 	for (var c = 0; c < wins.length; c++) {
 

@@ -6,12 +6,11 @@ var piece;
 
 socket.on('start game', function(data) {
 	id = '/#' + socket.id;
-	console.log('game starting!');
+	
 	$('#waiting').hide();
 	$('#board-div').show();
 
 	for (var i = 0; i < data.moves.length; i++) {
-		console.log(data.moves[i].sector);
 		$('#' + data.moves[i].sector + ' #' + data.moves[i].piece + '-img').show();
 	}
 
@@ -22,8 +21,6 @@ socket.on('start game', function(data) {
 	$('body').append('<p>You are: ' + data.name);
 	$('body').append('<p>Your Piece: ' + piece);
 
-	console.log(turn);
-	console.log(id);
 });
 
 socket.on('move-confirm', function(data) {
@@ -46,10 +43,6 @@ $(function() {
 	$('.sector img').hide();
 
 	$('.sector').on('click', function() {
-
-		console.log(turn);
-		console.log(id);
-		console.log(socket.id);
 		
 		socket.emit('move', {id: id, piece: piece, sector: $(this).attr('id')});
 		
