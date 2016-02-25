@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		<link rel="stylesheet" href="media/css/main.css">
+		<title>TicTacToe</title>
+	</head>
+	<body>
+		<p id='waiting'>Waiting on another player...</p>
+		<div id='board-div'>
+			<img id='board-img' src="/media/imgs/tictac.png" alt="">
+			<div class='sector' id='sector-tl'>
+				<img id='o-img' src="/media/imgs/o.jpg" alt="">
+				<img id='x-img' src="/media/imgs/x.png" alt="">
+			</div>
+			<div class='sector' id='sector-tm'>
+				<img id='o-img' src="/media/imgs/o.jpg" alt="">
+				<img id='x-img' src="/media/imgs/x.png" alt="">
+			</div>
+			<div class='sector' id='sector-tr'>
+				<img id='o-img' src="/media/imgs/o.jpg" alt="">
+				<img id='x-img' src="/media/imgs/x.png" alt="">
+			</div>
+			<div class='sector' id='sector-ml'>
+				<img id='o-img' src="/media/imgs/o.jpg" alt="">
+				<img id='x-img' src="/media/imgs/x.png" alt="">
+			</div>
+			<div class='sector' id='sector-mm'>
+				<img id='o-img' src="/media/imgs/o.jpg" alt="">
+				<img id='x-img' src="/media/imgs/x.png" alt="">
+			</div>
+			<div class='sector' id='sector-mr'>
+				<img id='o-img' src="/media/imgs/o.jpg" alt="">
+				<img id='x-img' src="/media/imgs/x.png" alt="">
+			</div>
+			<div class='sector' id='sector-bl'>
+				<img id='o-img' src="/media/imgs/o.jpg" alt="">
+				<img id='x-img' src="/media/imgs/x.png" alt="">
+			</div>
+			<div class='sector' id='sector-bm'>
+				<img id='o-img' src="/media/imgs/o.jpg" alt="">
+				<img id='x-img' src="/media/imgs/x.png" alt="">
+			</div>
+			<div class='sector' id='sector-br'>
+				<img id='o-img' src="/media/imgs/o.jpg" alt="">
+				<img id='x-img' src="/media/imgs/x.png" alt="">
+			</div>
+		</div>
+
+		<script src='/socket.io/socket.io.js'></script>
+		<script src='/media/js/jquery.js'></script>
+		<script src='/media/js/main.js'></script>
+
+	</body>
+</html>

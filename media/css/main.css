@@ -1,0 +1,70 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#board-div {
+	margin: 0;
+	padding: 0;
+	width: 600px;
+	height: 600px;
+}
+
+.sector {
+	width: 100px;
+	height: 100px;
+	padding: 30px;
+	position: fixed;
+	cursor: pointer;
+}
+
+.sector img {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+}
+
+#sector-tl {
+	top: 25px;
+	left: 25px;
+}
+
+#sector-tm {
+	top: 25px;
+	left: 225px;
+}
+
+#sector-tr {
+	top: 25px;
+	left: 425px;
+}
+
+#sector-ml {
+	top: 225px;
+	left: 25px;
+}
+
+#sector-mm {
+	top: 225px;
+	left: 225px;
+}
+
+#sector-mr {
+	top: 225px;
+	left: 425px;
+}
+
+#sector-bl {
+	top: 425px;
+	left: 25px;
+}
+
+#sector-bm {
+	top: 425px;
+	left: 225px;
+}
+
+#sector-br {
+	top: 425px;
+	left: 425px;
+}
