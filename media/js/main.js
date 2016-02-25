@@ -25,6 +25,13 @@ socket.on('start game', function(data) {
 
 socket.on('move-confirm', function(data) {
 	$('#' + data.sector + ' #' + data.piece + '-img').show();
+	turn = data.turn;
+
+	if (turn != id) {
+		$('body').append('<p id="turn-indicator">Your Turn!</p>');
+	} else {
+		$('#turn-indicator').remove();
+	}
 });
 
 socket.on('game won', function(data) {

@@ -41,7 +41,7 @@ io.on('connection', function(socket) {
 		if (moved[0] == null ) {
 			if (data.id == turn) {
 
-				io.emit('move-confirm', data);
+				io.emit('move-confirm', {sector: data.sector, piece: data.piece, turn: turn});
 				moves.push(data);
 
 				checkWin();
